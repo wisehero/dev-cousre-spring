@@ -1,6 +1,6 @@
 package programmers.spring.repository;
 
-import programmers.spring.Order;
+import programmers.spring.order.Order;
 
 public interface OrderRepository {
 

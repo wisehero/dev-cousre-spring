@@ -1,4 +1,4 @@
-package programmers.spring;
+package programmers.spring.order;
 
 import programmers.spring.voucher.Voucher;
 
@@ -40,5 +40,7 @@ public class Order {
         this.orderStatus = orderStatus;
     }
 
-
+    public UUID getOrderId() {
+        return orderId;
+    }
 }

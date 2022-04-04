@@ -1,7 +1,7 @@
 package programmers.spring.repository;
 
 import org.springframework.stereotype.Repository;
-import programmers.spring.Order;
+import programmers.spring.order.Order;
 
 import java.util.Map;
 import java.util.UUID;

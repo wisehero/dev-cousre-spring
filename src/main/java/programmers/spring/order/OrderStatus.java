@@ -1,4 +1,4 @@
-package programmers.spring;
+package programmers.spring.order;
 
 public enum OrderStatus {
     ACCEPTED,

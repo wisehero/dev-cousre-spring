@@ -1,4 +1,4 @@
-package programmers.spring;
+package programmers.spring.order;
 
 import java.util.UUID;
 
