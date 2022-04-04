@@ -1,4 +1,4 @@
-package programmers.spring;
+package programmers.spring.voucher;
 
 import programmers.spring.voucher.Voucher;
 
