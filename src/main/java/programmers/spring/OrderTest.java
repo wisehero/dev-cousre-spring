@@ -1,10 +1,10 @@
 package programmers.spring;
 
 import org.springframework.util.Assert;
+import programmers.spring.voucher.FixedAmountVoucher;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 public class OrderTest {
