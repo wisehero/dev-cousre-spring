@@ -1,12 +1,14 @@
 package programmers.spring.service;
 
-import programmers.spring.Order;
-import programmers.spring.OrderItem;
+import org.springframework.stereotype.Service;
+import programmers.spring.order.Order;
+import programmers.spring.order.OrderItem;
 import programmers.spring.repository.OrderRepository;
 
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class OrderService {
     private final VoucherService voucherService;
     private final OrderRepository orderRepository;
