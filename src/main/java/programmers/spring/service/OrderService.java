@@ -1,6 +1,7 @@
 package programmers.spring.service;
 
 import org.springframework.stereotype.Service;
+import programmers.spring.config.VersionProvider;
 import programmers.spring.order.Order;
 import programmers.spring.order.OrderItem;
 import programmers.spring.repository.OrderRepository;
@@ -12,10 +13,13 @@ import java.util.UUID;
 public class OrderService {
     private final VoucherService voucherService;
     private final OrderRepository orderRepository;
+    private final VersionProvider versionProvider;
 
-    public OrderService(VoucherService voucherService, OrderRepository orderRepository) {
+    public OrderService(VoucherService voucherService, OrderRepository orderRepository, VersionProvider versionProvider
+    ) {
         this.voucherService = voucherService;
         this.orderRepository = orderRepository;
+        this.versionProvider = versionProvider;
     }
 
     public Order createOrder(UUID customerId, List<OrderItem> orderItems) {
