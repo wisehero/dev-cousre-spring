@@ -1,6 +1,6 @@
-package programmers.spring.repository;
+package programmers.spring.voucher;
 
-import programmers.spring.voucher.Voucher;
+
 
 import java.util.Optional;
 import java.util.UUID;
