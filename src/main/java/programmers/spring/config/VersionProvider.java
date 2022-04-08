@@ -3,8 +3,9 @@ package programmers.spring.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
 
-@ComponentScan
+@Component
 @PropertySource("version.properties")
 public class VersionProvider {
     private final String version;
