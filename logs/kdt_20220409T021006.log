@@ -1,0 +1,11 @@
+02:10:07.735 [main] DEBUG p.spring.order.OrderProperties - [OrderProperties] version -> {0}
+02:10:07.737 [main] DEBUG p.spring.order.OrderProperties - [OrderProperties] minimumOrderAmount -> {0}
+02:10:07.737 [main] DEBUG p.spring.order.OrderProperties - [OrderProperties] supportVendors -> {0}
+02:10:08.008 [main] INFO  programmers.spring.OrderTester - logger name => programmers.spring.OrderTester
+02:10:08.009 [main] INFO  programmers.spring.OrderTester - version -> v1.0
+02:10:08.009 [main] INFO  programmers.spring.OrderTester - minimumOrderAmount -> 1
+02:10:08.009 [main] INFO  programmers.spring.OrderTester - supportVendors -> [dev-a, dev-b, c, d]
+02:10:08.009 [main] INFO  programmers.spring.OrderTester - description -> line 1 hello world
+line 2 xxxx
+line 3
+
