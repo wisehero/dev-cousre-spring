@@ -43,4 +43,12 @@ public class Order {
     public UUID getOrderId() {
         return orderId;
     }
+
+    public Optional<Voucher> getVoucher() {
+        return voucher;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
 }
