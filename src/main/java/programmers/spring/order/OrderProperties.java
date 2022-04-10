@@ -1,30 +1,57 @@
 package programmers.spring.order;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import java.text.MessageFormat;
 import java.util.List;
 
-@ComponentScan
+@Component
+@ConfigurationProperties(prefix = "kdt")
 public class OrderProperties implements InitializingBean {
 
-    @Value("v1.1.1")
+    private final static Logger logger = LoggerFactory.getLogger(OrderProperties.class);
+
     private String version;
 
-    @Value("0")
     private String minimumOrderAmount;
 
-    @Value("D")
     private List<String> supportVendors;
+
+    private String description;
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public void setMinimumOrderAmount(String minimumOrderAmount) {
+        this.minimumOrderAmount = minimumOrderAmount;
+    }
+
+    public void setSupportVendors(List<String> supportVendors) {
+        this.supportVendors = supportVendors;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println(MessageFormat.format("[OrderProperties] version -> {0}", version));
-        System.out.println(MessageFormat.format("[OrderProperties] minimumOrderAmount -> {0}", minimumOrderAmount));
-        System.out.println(MessageFormat.format("[OrderProperties] supportVendors -> {0}", supportVendors));
+        logger.debug("[OrderProperties] version -> {0}", version);
+        logger.debug("[OrderProperties] minimumOrderAmount -> {0}", minimumOrderAmount);
+        logger.debug("[OrderProperties] supportVendors -> {0}", supportVendors);
     }
 
     public String getVersion() {
