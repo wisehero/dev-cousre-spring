@@ -27,3 +27,4 @@ public class JdbcVoucherRepository implements VoucherRepository {
         return voucher;
     }
 }
+

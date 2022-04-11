@@ -24,20 +24,20 @@
     <!--        </encoder>-->
     <!--    </appender>-->
 
-    <appender name="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/access.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>logs/access-d%{yyyy-MM-dd}.log</fileNamePattern>
-        </rollingPolicy>
-    </appender>
+    <!--    <appender name="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--        <file>logs/access.log</file>-->
+    <!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+    <!--            <fileNamePattern>logs/access-d%{yyyy-MM-dd}.log</fileNamePattern>-->
+    <!--        </rollingPolicy>-->
+    <!--    </appender>-->
 
-    <logger name="programmers.spring" level="debug">
-        <appender-ref ref="FILE"/>
-    </logger>
+    <!--    <logger name="programmers.spring" level="debug">-->
+    <!--        <appender-ref ref="FILE"/>-->
+    <!--    </logger>-->
 
     <logger name="programmers.spring" level="debug"/>
 
-    <root level="warn">
+    <root level="info">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
