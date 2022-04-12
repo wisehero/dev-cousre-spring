@@ -20,4 +20,6 @@ public interface CustomerRepository {
 
     void deleteAll();
 
+    int count();
+
 }
