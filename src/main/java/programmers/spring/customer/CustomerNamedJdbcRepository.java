@@ -5,12 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.util.*;
 
+@Repository
 public class CustomerNamedJdbcRepository implements CustomerRepository {
 
     private final Logger logger = LoggerFactory.getLogger(CustomerNamedJdbcRepository.class);
@@ -52,7 +54,7 @@ public class CustomerNamedJdbcRepository implements CustomerRepository {
 
     @Override
     public Customer update(Customer customer) {
-        var update = jdbcTemplate.update("UPDATE customers SET name = :name, email = : email, last_login_at = :lastLoginAt WHERE customer_id = UUID_TO_BIN(:customerId)",
+        var update = jdbcTemplate.update("UPDATE customers SET name = :name, email = :email, last_login_at = :lastLoginAt WHERE customer_id = UUID_TO_BIN(:customerId)",
                 toParamMap(customer));
         if (update != 1) {
             throw new RuntimeException("Nothing was updated");
